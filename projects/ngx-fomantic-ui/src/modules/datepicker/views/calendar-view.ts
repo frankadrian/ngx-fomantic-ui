@@ -1,4 +1,4 @@
-import { Input, QueryList, ViewChildren, AfterViewInit, Renderer2, OnDestroy } from "@angular/core";
+import { Input, QueryList, ViewChildren, AfterViewInit, Renderer2, OnDestroy, Injectable } from "@angular/core";
 import { KeyCode } from "../../../misc/util/internal";
 import { CalendarItem, FuiCalendarItem } from "../directives/calendar-item";
 import { CalendarService } from "../services/calendar.service";
@@ -13,6 +13,7 @@ export enum CalendarViewType {
 }
 export type CalendarViewResult = [Date, CalendarViewType];
 
+@Injectable()
 export abstract class CalendarView implements AfterViewInit, OnDestroy {
     private _type:CalendarViewType;
     private _service:CalendarService;

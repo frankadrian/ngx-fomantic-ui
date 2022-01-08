@@ -1,4 +1,4 @@
-import {NgModule} from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FuiTransitionModule} from '../../modules/transition/internal';
 import {FuiProgressModule} from '../../modules/progress/internal';
@@ -31,6 +31,10 @@ import {FuiMessageService} from './services/message-service';
   entryComponents: [
     FuiMessage,
     FuiMessageGlobalContainer
+  ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA,
+    NO_ERRORS_SCHEMA
   ]
 })
 export class FuiMessageModule {
