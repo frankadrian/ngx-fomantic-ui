@@ -74,10 +74,12 @@
           },
           "configurations": {
             "production": {
-              "fileReplacements": [{
-                "replace": "projects/ngx-fomantic-ui-docs/src/environments/environment.ts",
-                "with": "projects/ngx-fomantic-ui-docs/src/environments/environment.prod.ts"
-              }],
+              "fileReplacements": [
+                {
+                  "replace": "projects/ngx-fomantic-ui-docs/src/environments/environment.ts",
+                  "with": "projects/ngx-fomantic-ui-docs/src/environments/environment.prod.ts"
+                }
+              ],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -87,7 +89,8 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "budgets": [{
+              "budgets": [
+                {
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
@@ -154,6 +157,7 @@
   },
   "defaultProject": "ngx-fomantic-ui",
   "cli": {
-    "packageManager": "npm"
+    "packageManager": "npm",
+    "analytics": false
   }
 }
