@@ -10,7 +10,7 @@
       "prefix": "fui",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
             "tsConfig": "projects/ngx-fomantic-ui/tsconfig.lib.json",
             "project": "projects/ngx-fomantic-ui/ng-package.json"
@@ -27,18 +27,6 @@
             "main": "projects/ngx-fomantic-ui/src/test.ts",
             "tsConfig": "projects/ngx-fomantic-ui/tsconfig.spec.json",
             "karmaConfig": "projects/ngx-fomantic-ui/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/ngx-fomantic-ui/tsconfig.lib.json",
-              "projects/ngx-fomantic-ui/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
           }
         }
       }
@@ -57,7 +45,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "aot": true,
             "outputPath": "dist/ngx-fomantic-ui-docs",
             "index": "projects/ngx-fomantic-ui-docs/src/index.html",
             "main": "projects/ngx-fomantic-ui-docs/src/main.ts",
@@ -70,24 +57,31 @@
             "styles": [
               "projects/ngx-fomantic-ui-docs/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
-              "fileReplacements": [{
-                "replace": "projects/ngx-fomantic-ui-docs/src/environments/environment.ts",
-                "with": "projects/ngx-fomantic-ui-docs/src/environments/environment.prod.ts"
-              }],
+              "fileReplacements": [
+                {
+                  "replace": "projects/ngx-fomantic-ui-docs/src/environments/environment.ts",
+                  "with": "projects/ngx-fomantic-ui-docs/src/environments/environment.prod.ts"
+                }
+              ],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "budgets": [{
+              "budgets": [
+                {
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
@@ -101,7 +95,8 @@
           },
           "allowedCommonJsDependencies": [
             "highlight.js"
-          ]
+          ],
+          "defaultConfiguration": ""
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -136,24 +131,13 @@
               "projects/ngx-fomantic-ui-docs/src/assets"
             ]
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/ngx-fomantic-ui-docs/tsconfig.app.json",
-              "projects/ngx-fomantic-ui-docs/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
         }
       }
     }
   },
   "defaultProject": "ngx-fomantic-ui",
   "cli": {
-    "packageManager": "npm"
+    "packageManager": "npm",
+    "analytics": false
   }
 }

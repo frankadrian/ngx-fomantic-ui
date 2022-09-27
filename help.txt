@@ -1,0 +1,18 @@
+npm run build:lib
+ng serve
+
+npm run build:lib:prod
+
+cd dist
+
+npm init --scope=aligorji
+
+===========================================================
+@aligorji/ngx-fomantic-ui
+1.0.0
+https://github.com/aligorji/ngx-fomantic-ui
+===========================================================
+
+npm login
+
+npm publish --access=public
