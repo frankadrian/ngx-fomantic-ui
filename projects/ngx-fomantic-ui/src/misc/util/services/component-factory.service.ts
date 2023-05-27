@@ -4,12 +4,11 @@ import {
   ComponentRef,
   Injectable,
   Injector,
-  Provider,
-  ReflectiveInjector,
+  StaticProvider,
   TemplateRef,
   Type,
   ViewContainerRef
-} from '@angular/core';
+} from "@angular/core"
 
 export interface IImplicitContext<T> {
   $implicit?: T;
@@ -22,15 +21,15 @@ export class FuiComponentFactory {
               private _injector: Injector) {
   }
 
-  public createComponent<T>(type: Type<T>, providers: Provider[] = []): ComponentRef<T> {
+  public createComponent<T>(type: Type<T>, providers: StaticProvider[] = []): ComponentRef<T> {
     // Resolve a factory for creating components of type `type`.
     const factory = this._componentFactoryResolver.resolveComponentFactory(type as Type<T>);
 
     // Resolve and create an injector with the specified providers.
-    const injector = ReflectiveInjector.resolveAndCreate(
+    const injector = Injector.create({
       providers,
-      this._injector
-    );
+      parent: this._injector
+    });
 
     // Create a component using the previously resolved factory & injector.
     const componentRef = factory.create(injector);
