@@ -6,3 +6,4 @@ export * from './helpers/lookup-fn';
 export * from './services/search.service';
 
 export * from './search.module';
+export { IResultContext } from "./components/IResultContext"

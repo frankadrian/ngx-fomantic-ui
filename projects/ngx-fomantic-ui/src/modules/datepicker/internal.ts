@@ -23,3 +23,4 @@ export * from './views/month-view';
 export * from './views/year-view';
 
 export * from './datepicker.module';
+export { DatepickerMode } from "./datepickerMode"

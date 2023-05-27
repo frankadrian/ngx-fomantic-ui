@@ -5,12 +5,12 @@ npm run build:lib:prod
 
 cd dist
 
-npm init --scope=aligorji
+npm init --scope=frankadrian
 
 ===========================================================
-@aligorji/ngx-fomantic-ui
+@frankadrian/ngx-fomantic-ui
 1.0.0
-https://github.com/aligorji/ngx-fomantic-ui
+https://github.com/frankadrian/ngx-fomantic-ui
 ===========================================================
 
 npm login

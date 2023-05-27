@@ -1,17 +1,7 @@
-import {Component, HostBinding, HostListener} from '@angular/core';
-import {CalendarService} from './../services/calendar.service';
-import {DatetimeConfig} from '../classes/calendar-config';
-import {FuiLocalizationService} from '../../../behaviors/localization/internal';
-
-export type DatepickerMode = 'year' | 'month' | 'date' | 'datetime' | 'time';
-
-export const DatepickerMode = {
-  Year: 'year' as DatepickerMode,
-  Month: 'month' as DatepickerMode,
-  Date: 'date' as DatepickerMode,
-  Datetime: 'datetime' as DatepickerMode,
-  Time: 'time' as DatepickerMode
-};
+import { Component, HostBinding, HostListener } from "@angular/core"
+import { CalendarService } from "./../services/calendar.service"
+import { DatetimeConfig } from "../classes/calendar-config"
+import { FuiLocalizationService } from "../../../behaviors/localization/internal"
 
 @Component({
   selector: 'fui-datepicker',
