@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FuiPopupConfig } from 'ngx-fomantic-ui';
+import { FuiPopupConfig } from '../../../ngx-fomantic-ui/src/public-api';
 
 @Component({
     selector: 'demo-root',

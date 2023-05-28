@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ComponentModalConfig, ModalSize, FuiBaseModal } from 'ngx-fomantic-ui';
+import { ComponentModalConfig, ModalSize, FuiBaseModal } from '../../../../ngx-fomantic-ui/src/public-api';
 
 interface IConfirmModalContext {
     question: string;

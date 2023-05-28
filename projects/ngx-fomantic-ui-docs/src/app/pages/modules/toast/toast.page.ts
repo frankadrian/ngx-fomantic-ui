@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { ApiDefinition } from '../../../components/api/api.component';
-import { FuiModalService } from 'ngx-fomantic-ui';
-import { AlertModal } from '../../../modals/alert.modal';
 
 const exampleMinimalTemplate = `
     <fui-toast [dismissible]="false">

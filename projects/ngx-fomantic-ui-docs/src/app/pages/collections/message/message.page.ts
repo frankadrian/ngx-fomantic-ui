@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ApiDefinition } from '../../../components/api/api.component';
-import { MessageState, MessagePosition, MessageConfig, MessageController, FuiMessageService } from 'ngx-fomantic-ui';
+import { MessageState, MessagePosition, MessageConfig, MessageController, FuiMessageService } from '../../../../../../ngx-fomantic-ui/src/public-api';
 
 const exampleStandardTemplate = `
 <fui-message class="success">

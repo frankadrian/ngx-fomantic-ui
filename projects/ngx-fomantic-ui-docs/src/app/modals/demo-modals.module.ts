@@ -1,6 +1,6 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FuiModalModule } from 'ngx-fomantic-ui';
+import { FuiModalModule } from '../../../../ngx-fomantic-ui/src/public-api';
 import { AlertModalComponent } from './alert.modal';
 import { ConfirmModalComponent } from './confirm.modal';
 

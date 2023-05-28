@@ -2,7 +2,7 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/cor
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { FomanticUIModule } from 'ngx-fomantic-ui';
+import { FomanticUIModule } from '../../../../ngx-fomantic-ui/src/';
 import { DemoComponentsModule } from '../components/demo-components.module';
 
 import { GettingStartedPage } from './getting-started/getting-started.page';

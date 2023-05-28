@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { FuiCollapseModule, FuiPopupModule } from 'ngx-fomantic-ui';
+import { FuiCollapseModule, FuiPopupModule } from '../../../../ngx-fomantic-ui/src/public-api';
 
 import { ApiComponent } from './api/api.component';
 import { CodeblockComponent } from './codeblock/codeblock.component';

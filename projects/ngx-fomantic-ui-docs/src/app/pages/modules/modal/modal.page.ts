@@ -7,7 +7,7 @@ import {
     FuiBaseModal,
     FuiModalService,
     TemplateModalConfig
-} from 'ngx-fomantic-ui';
+} from '../../../../../../ngx-fomantic-ui/src/public-api';
 import { AlertModal } from '../../../modals/alert.modal';
 
 const exampleTemplateModalTemplate = `

@@ -1,5 +1,5 @@
 import {Component, ViewChild} from '@angular/core';
-import {FuiToastContainer} from 'ngx-fomantic-ui';
+import {FuiToastContainer} from '../../../../../../ngx-fomantic-ui/src/public-api';
 
 @Component({
     selector: 'demo-page-test',

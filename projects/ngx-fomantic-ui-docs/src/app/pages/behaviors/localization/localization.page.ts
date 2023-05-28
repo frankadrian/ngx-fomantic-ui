@@ -1,5 +1,5 @@
 import { Component, OnDestroy } from '@angular/core';
-import { FuiLocalizationService } from 'ngx-fomantic-ui';
+import { FuiLocalizationService } from '../../../../../../ngx-fomantic-ui/src/public-api';
 import locales from 'ngx-fomantic-ui/locales';
 
 const exampleTemplate = `

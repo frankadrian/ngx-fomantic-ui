@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FuiPopupModule, FuiSidebarModule } from 'ngx-fomantic-ui';
+import { FuiPopupModule, FuiSidebarModule } from '../../../ngx-fomantic-ui/src/public-api';
 
 import { DemoRoutingModule } from './app.routing';
 import { DemoComponentsModule } from './components/demo-components.module';

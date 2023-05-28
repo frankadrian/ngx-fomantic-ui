@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { ApiDefinition } from '../../../components/api/api.component';
-import { FuiPopupConfig } from 'ngx-fomantic-ui';
+import { FuiPopupConfig } from '../../../../../../ngx-fomantic-ui/src/public-api';
 
 const exampleStandardTemplate = `
 <button class="ui green icon button" fuiPopup popupHeader="Example" popupText="This is an example popup">

@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { Transition, TransitionController, TransitionDirection } from 'ngx-fomantic-ui';
-import { ApiDefinition } from '../../../components/api/api.component';
+import { Component, NO_ERRORS_SCHEMA } from "@angular/core"
+import { Transition, TransitionController, TransitionDirection } from "../../../../../../ngx-fomantic-ui/src"
+import { ApiDefinition } from "../../../components/api/api.component"
 
 const exampleStandardTemplate = `
 <div class="ui segment">
@@ -10,43 +10,43 @@ const exampleStandardTemplate = `
     <fui-select-option *ngFor="let a of animSelect.availableOptions" [value]="a"></fui-select-option>
 </fui-select>
 <button class="ui button" (click)="animate(transitionName)">Animate</button>
-`;
+`
 
 @Component({
-    selector: 'demo-page-transition',
-    templateUrl: './transition.page.html'
+  selector: "demo-page-transition",
+  templateUrl: "./transition.page.html",
 })
 export class TransitionPage {
-    public api: ApiDefinition = [
+  public api: ApiDefinition = [
+    {
+      selector: "[fuiTransition]",
+      properties: [
         {
-            selector: '[fuiTransition]',
-            properties: [
-                {
-                    name: 'fuiTransition',
-                    type: 'TransitionController',
-                    description: 'Sets the transition controller.',
-                    required: true
-                }
-            ]
+          name: "fuiTransition",
+          type: "TransitionController",
+          description: "Sets the transition controller.",
+          required: true
         }
-    ];
+      ]
+    }
+  ]
 
-    public transitionControllerCode = `
+  public transitionControllerCode = `
 import {TransitionController} from "ngx-fomantic-ui";
 
 @Component({})
 export class MyComponent {
     public transitionController = new TransitionController();
 }
-`;
+`
 
-    public transitionElementCode = `
+  public transitionElementCode = `
 <div class="ui segment">
     <img src="https://lerebooks.files.wordpress.com/2012/11/eye.jpg?w=150" class="ui image" [fuiTransition]="transitionController">
 </div>
-`;
+`
 
-    public transitionExampleCode = `
+  public transitionExampleCode = `
 import {TransitionController, Transition, TransitionDirection} from "ngx-fomantic-ui";
 
 @Component({})
@@ -58,11 +58,11 @@ export class MyComponent {
             new Transition(transitionName, 500, TransitionDirection.In, () => console.log("Completed transition.")));
     }
 }
-`;
+`
 
-    public exampleStandardTemplate: string = exampleStandardTemplate;
+  public exampleStandardTemplate: string = exampleStandardTemplate
 
-    public transitionControllerInterface = `
+  public transitionControllerInterface = `
 this.ctrl = new TransitionController(isInitiallyVisible:boolean = false, display:string = "block");
 // isInitiallyVisible sets whether the element being animated starts off visible.
 // display sets the 'display' style set on the animated element when it is visible.
@@ -87,9 +87,9 @@ this.ctrl.stopAll();
 
 this.ctrl.clearQueue();
 // Continues with the current transition, but empties the queue.
-`;
+`
 
-    public advancedExampleCode = `
+  public advancedExampleCode = `
 import {FuiTransition, TransitionController, Transition} from "ngx-fomantic-ui";
 
 @Component({})
@@ -109,32 +109,32 @@ export class MyComponent extends FuiTransition {
         this._transitionController.animate(new Transition(...));
     }
 }
-`;
+`
 }
 
 @Component({
-    selector: 'example-transition-standard',
-    template: exampleStandardTemplate
+  selector: "example-transition-standard",
+  template: exampleStandardTemplate,
 })
 export class TransitionExampleStandard {
-    public transitionController: TransitionController = new TransitionController();
+  public transitionController: TransitionController = new TransitionController()
 
-    public transitions: string[] = [
-        'scale', 'fade', 'fade up', 'fade down',
-        'fade left', 'fade right', 'horizontal flip', 'vertical flip',
-        'drop', 'fly left', 'fly right', 'fly up',
-        'fly down', 'swing left', 'swing right', 'swing up',
-        'swing down', 'browse', 'browse right', 'slide left',
-        'slide right', 'slide up', 'slide down', 'jiggle',
-        'flash', 'shake', 'pulse', 'tada', 'bounce'
-    ];
+  public transitions: string[] = [
+    "scale", "fade", "fade up", "fade down",
+    "fade left", "fade right", "horizontal flip", "vertical flip",
+    "drop", "fly left", "fly right", "fly up",
+    "fly down", "swing left", "swing right", "swing up",
+    "swing down", "browse", "browse right", "slide left",
+    "slide right", "slide up", "slide down", "jiggle",
+    "flash", "shake", "pulse", "tada", "bounce"
+  ]
 
-    public transitionName = 'scale';
+  public transitionName = "scale"
 
-    public animate(transitionName: string = 'scale'): void {
-        this.transitionController.animate(
-            new Transition(transitionName, 500, TransitionDirection.Either, () => console.log('Completed transition.')));
-    }
+  public animate(transitionName: string = "scale"): void {
+    this.transitionController.animate(
+      new Transition(transitionName, 500, TransitionDirection.Either, () => console.log("Completed transition.")))
+  }
 }
 
-export const TransitionPageComponents = [TransitionPage, TransitionExampleStandard];
+export const TransitionPageComponents = [TransitionPage, TransitionExampleStandard]
