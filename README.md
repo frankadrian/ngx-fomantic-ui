@@ -33,7 +33,7 @@ Angular and jQuery don't go together - this is the fundamental principal of this
 
 Note that only Fomantic UI elements that use jQuery are recreated here - those written purely in CSS aren't included as they can be used in Angular apps already.
 
-**This is a fork of [edcarroll](https://github.com/edcarroll)'s [ng2-semantic-ui](https://github.com/edcarroll/ng2-semantic-ui), updated to Angular 7 and Fomantic UI.**
+**This is a fork of [edcarroll](https://github.com/edcarroll)'s [ng2-semantic-ui](https://github.com/edcarroll/ng2-semantic-ui), updated to Angular 16 and Fomantic UI.**
 
 ## Installation & Usage
 
@@ -41,7 +41,7 @@ See the [Documentation](https://ngx-fomantic-ui.github.io/ngx-fomantic-ui) for i
 
 ## Dependencies
 
-* [Angular](https://angular.io) (^10.0.0)
+* [Angular](https://angular.io) (^16.0.0)
 * [Fomantic UI CSS](http://fomantic-ui.com/) (^2.7.4) (jQuery is **not** required)
 
 ## Component Support
