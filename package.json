@@ -1,5 +1,5 @@
 {
-  "name": "@frankadrian/ngx-fomantic-ui",
+  "name": "ngx-fomantic-ui",
   "version": "0.12.0",
   "scripts": {
     "ng": "ng",
@@ -30,7 +30,7 @@
     "element-closest": "^3.0.2",
     "highlight.js": "^10.1.2",
     "highlightjs-line-numbers.js": "^2.8.0",
-    "ngx-highlightjs": "^4.1.1",
+    "ngx-highlightjs": "^9.0.0",
     "popper.js": "^1.16.1",
     "rxjs": "~6.6.2",
     "tslib": "^2.3.1",
