@@ -14,14 +14,14 @@ import {MessageController} from '../classes/message-controller';
 :host {
     display: block;
 }
-:host >>> fui-message {
+::ng-deep fui-message {
     display: block;
     margin-bottom: 1rem;
 }
-:host >>> fui-message:last-of-type {
+::ng-deep fui-message:last-of-type {
     margin-bottom: 0;
 }
-:host >>> fui-message {
+::ng-deep fui-message {
     cursor: pointer;
 }
 `]
